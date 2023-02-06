@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce website</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="#"><img class="header-logo" src="./images/logo.png" /></a>
+        <div class="brand-name">FitWorld</div>
+        <div class="cart-icon-container">
+          <img
+            class="cart-icon"
+            src="./images/cart.png"
+            onclick="clickCart()"
+          />
+          <div class="cart-qty-icon"><p id="qty">0</p></div>
+        </div>
+      </div>
+    </header>
+
+    <div id="cart-menu-container">
+      <h3 class="cart-title">Added Items</h3>
+      <ul class="cart-menu"></ul>
+      <p class="total">Total: $<span id="total-price">0</span></p>
+    </div>
+
+    <main>
+      <h1>New Releases</h1>
+      <div class="item-list">
+        <div class="item">
+          <div class="item-image-1"></div>
+          <div class="item-bottom">
+            <div class="item-description">
+              <p class="item-name">Comfortable Socks</p>
+              <p class="item-price">$13</p>
+            </div>
+            <button
+              type="button"
+              id="1"
+              class="btn"
+              onclick="clickPurchase(this.id)"
+            >
+              Purchase
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-2"></div>
+          <div class="item-bottom">
+            <div class="item-description">
+              <p class="item-name">Training shirt</p>
+              <p class="item-price">$26</p>
+            </div>
+            <button
+              type="button"
+              id="2"
+              class="btn"
+              onclick="clickPurchase(this.id)"
+            >
+              Purchase
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-3"></div>
+          <div class="item-bottom">
+            <div class="item-description">
+              <p class="item-name">Waterproof shorts</p>
+              <p class="item-price">$34</p>
+            </div>
+            <button
+              type="button"
+              id="3"
+              class="btn"
+              onclick="clickPurchase(this.id)"
+            >
+              Purchase
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-4"></div>
+          <div class="item-bottom">
+            <div class="item-description">
+              <p class="item-name">Runner leggings</p>
+              <p class="item-price">$30</p>
+            </div>
+            <button
+              type="button"
+              id="4"
+              class="btn"
+              onclick="clickPurchase(this.id)"
+            >
+              Purchase
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-5"></div>
+          <div class="item-bottom">
+            <div class="item-description">
+              <p class="item-name">Runner shoes</p>
+              <p class="item-price">$56</p>
+            </div>
+            <button
+              type="button"
+              id="5"
+              class="btn"
+              onclick="clickPurchase(this.id)"
+            >
+              Purchase
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-6"></div>
+          <div class="item-bottom">
+            <div class="item-description">
+              <p class="item-name">Runner shoes Ⅱ</p>
+              <p class="item-price">$65</p>
+            </div>
+            <button
+              type="button"
+              id="6"
+              class="btn"
+              onclick="clickPurchase(this.id)"
+            >
+              Purchase
+            </button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-image-7"></div>
+          <div class="item-bottom">
+            <div class="item-description">
+              <p class="item-name">Training kit</p>
+              <p class="item-price">$58</p>
+            </div>
+            <button
+              type="button"
+              id="7"
+              class="btn"
+              onclick="clickPurchase(this.id)"
+            >
+              Purchase
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./scripts/api/getProductData.js"></script>
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

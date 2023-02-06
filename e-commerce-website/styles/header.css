@@ -1,0 +1,111 @@
+header {
+  width: 100%;
+  height: 80px;
+  color: var(--color-grey);
+  background-color: transparent;
+}
+
+.header-container {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 30px;
+  font-weight: var(--font-weight-heavy);
+  color: var(--color-white);
+  letter-spacing: 8px;
+  text-shadow: 1px 1px 1px var(--brand-name-color),
+    1px 2px 1px var(--brand-name-color), 1px 3px 1px var(--brand-name-color),
+    1px 4px 1px var(--brand-name-color), 1px 5px 1px var(--brand-name-color),
+    1px 6px 1px var(--brand-name-color), 1px 7px 1px var(--brand-name-color),
+    1px 8px 1px var(--brand-name-color), 1px 9px 1px var(--brand-name-color),
+    1px 10px 1px var(--brand-name-color),
+    1px 18px 6px var(--brand-name-shadow-1),
+    1px 22px 10px var(--brand-name-shadow-2),
+    1px 25px 35px var(--brand-name-shadow-2),
+    1px 30px 60px var(--brand-name-shadow-1);
+}
+
+.cart-icon {
+  height: 48px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.cart-icon:hover {
+  opacity: 0.7;
+}
+
+.cart-qty-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+  border-radius: 50%;
+  background-color: orangered;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#qty {
+  font-size: 12px;
+}
+
+#cart-menu-container {
+  display: none;
+  overflow: auto;
+}
+
+.open#cart-menu-container {
+  display: block;
+  color: var(--color-white);
+  width: 300px;
+  height: calc(100vh - 80px);
+  background-color: var(--color-grey);
+  opacity: 0.9;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+
+.cart-title {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--color-white);
+  margin: 20px 0 20px 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border);
+  margin-left: 20px;
+}
+
+.item-description {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.remove-btn {
+  margin-right: 10px;
+}
+
+.total {
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--color-white);
+  margin: 20px 0 20px 20px;
+}

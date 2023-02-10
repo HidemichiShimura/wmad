@@ -6,6 +6,19 @@ function addTotal(price) {
   TotalPriceElement.innerHTML = CurrTotalPrice + Price;
 }
 
+function reduceTotal(id) {
+  const Item = document.getElementById(`cart-item-${id}`);
+  let Price = Item.getElementsByClassName("item-price");
+  Price = Price[0].innerHTML.substring(1);
+  Price = Number(Price);
+  const TotalPriceElement = document.getElementById("total-price");
+  const CurrTotalPrice = Number(TotalPriceElement.innerHTML);
+
+  console.log(CurrTotalPrice, Price);
+
+  TotalPriceElement.innerHTML = CurrTotalPrice - Price;
+}
+
 function addQty() {
   const QtyElement = document.getElementById("qty");
   const CurrQty = Number(QtyElement.innerHTML);
@@ -34,8 +47,9 @@ function clickCart() {
 function clickRemove(id) {
   const Item = document.getElementById(`cart-item-${id}`);
 
-  Item.remove();
   reduceQty();
+  reduceTotal(id);
+  Item.remove();
 }
 
 async function clickPurchase(id) {

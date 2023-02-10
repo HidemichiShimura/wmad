@@ -39,41 +39,41 @@ function clickRemove(id) {
 }
 
 async function clickPurchase(id) {
-  // const ProductData = await getProductData(id);
+  const ProductData = await getProductData(id);
 
-  // const Name = ProductData["name"];
-  // const Price = ProductData["price"];
+  const Name = ProductData["name"];
+  const Price = ProductData["price"];
 
-  // const CartMenu = document.querySelector(".cart-menu");
-  // const Li = document.createElement("li");
-  // const Div = document.createElement("div");
-  // const P1 = document.createElement("p");
-  // const P2 = document.createElement("p");
-  // const Btn = document.createElement("button");
+  const CartMenu = document.querySelector(".cart-menu");
+  const Li = document.createElement("li");
+  const Div = document.createElement("div");
+  const P1 = document.createElement("p");
+  const P2 = document.createElement("p");
+  const Btn = document.createElement("button");
 
-  // CartMenu.appendChild(Li);
-  // Li.appendChild(Div);
-  // Div.appendChild(P1);
-  // Div.appendChild(P2);
-  // Li.appendChild(Btn);
+  CartMenu.appendChild(Li);
+  Li.appendChild(Div);
+  Div.appendChild(P1);
+  Div.appendChild(P2);
+  Li.appendChild(Btn);
 
-  // Li.setAttribute("id", `cart-item-${id}`);
-  // Btn.setAttribute("type", "button");
-  // Btn.setAttribute("id", `${id}`);
-  // Btn.setAttribute("onclick", "clickRemove(this.id)");
+  Li.setAttribute("id", `cart-item-${id}`);
+  Btn.setAttribute("type", "button");
+  Btn.setAttribute("id", `${id}`);
+  Btn.setAttribute("onclick", "clickRemove(this.id)");
 
-  // Li.classList.add("cart-item");
-  // Div.classList.add("item-description");
-  // P1.classList.add("item-name");
-  // P2.classList.add("item-price");
-  // Btn.classList.add("btn");
-  // Btn.classList.add("remove-btn");
+  Li.classList.add("cart-item");
+  Div.classList.add("item-description");
+  P1.classList.add("item-name");
+  P2.classList.add("item-price");
+  Btn.classList.add("btn");
+  Btn.classList.add("remove-btn");
 
-  // P1.innerHTML = Name;
-  // P2.innerHTML = `$${Price}`;
-  // Btn.innerHTML = "Remove";
+  P1.innerHTML = Name;
+  P2.innerHTML = `$${Price}`;
+  Btn.innerHTML = "Remove";
 
-  // addTotal(Price);
+  addTotal(Price);
   addQty();
   alert("Added to your cart");
 }

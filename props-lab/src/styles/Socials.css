@@ -1,0 +1,15 @@
+.socials {
+  width: 100%;
+  height: 64px;
+  background-color: #161619;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-icon {
+  width: 25px;
+  height: 25px;
+}
